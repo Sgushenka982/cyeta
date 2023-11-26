@@ -1,6 +1,5 @@
-import picture1 from './resource/img/why-choose-us-1.jpg';
-import picture2 from './resource/img/why-choose-us-2.jpg';
-
+import picture1 from '../resource/img/index-html/why-choose-us-1.jpg';
+import picture2 from '../resource/img/index-html/why-choose-us-2.jpg';
 
 function WhyChooseUs(){
     return(

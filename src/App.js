@@ -1,38 +1,24 @@
-import './App.css';
-import Header from "./Header";
-import AboutUs from "./AboutUs";
-import WhyChooseUs from "./WhyChooseUs";
-import LatestProjects from "./LatestProjects";
-import Footer from "./Footer";
+import './resource/css/App.css';
+import Header from "./templates/Header";
+import Footer from "./templates/Footer";
+import Homepage from "./pages/Homepage";
+import {Route, Routes, useLocation} from "react-router-dom";
+import Services from "./pages/Services";
+import Projects from "./pages/Projects";
 
 function App() {
-  return (
-      <div className="page">
-          <Header/>
-          <AboutUs/>
-          <div className="background">
-              <div className="content expirience">
-                  <div className="expirience-item">
-                      <div className="expirience-item__number">+5</div>
-                      <p>Years within the industry in New Zealand</p>
-                  </div>
-                  <div className="whiteCircle"></div>
-                  <div className="expirience-item">
-                      <div className="expirience-item__number">+15</div>
-                      <p>Years of experience overseas</p>
-                  </div>
-                  <div className="whiteCircle"></div>
-                  <div className="expirience-item">
-                      <div className="expirience-item__number">+22</div>
-                      Finished projects
-                  </div>
-              </div>
-          </div>
-          <WhyChooseUs/>
-          <LatestProjects/>
-          <Footer/>
-      </div>
-  );
+    const location = useLocation()
+    return (
+        <div className={'page ' + (location.pathname === '/services' ? 'background' : '')}>
+            <Header/>
+            <Routes>
+                <Route path="/" element={<Homepage/>}/>
+                <Route path="/services" element={<Services/>}/>
+                <Route path="/projects" element={<Projects/>}/>
+            </Routes>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;

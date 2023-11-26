@@ -1,5 +1,5 @@
 import ContactForm from "./ContactForm";
-import pic from './resource/img/index-hero.jpg';
+import pic from '../resource/img/index-html/index-hero.jpg';
 
 function AboutUs(){
     return(

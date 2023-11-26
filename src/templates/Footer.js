@@ -1,3 +1,7 @@
+import logo from '../resource/img/icons/logo-cyeta-white.svg'
+import arrow from '../resource/img/icons/arrow-up-right-white.svg'
+import {NavLink} from "react-router-dom";
+
 function Footer(){
     return (
         <div className="background">
@@ -18,19 +22,22 @@ function Footer(){
                         </div>
                     </div>
                     <div className="footer-feedback">
-                        <input type="text" placeholder="Enter you email for a free quote"/>
+                        <div className="footer-feedback__input">
+                            <input type="text" placeholder="Enter you email for a free quote"/>
+                            <img src={arrow} alt=""/>
+                        </div>
                         <p>© 2021 Cyeta LTD. All rights reserved</p>
                     </div>
                 </div>
                 <div className="footer-menu">
-                    <div className="logo">(CYETA)</div>
+                    <img className="logo" alt="logo" src={logo}/>
                     <nav className="menu">
                         <ul className="menu-list">
-                            <li className="menu-list__link"><a href="#">Home</a></li>
-                            <li className="menu-list__link"><a href="#">Projects</a></li>
-                            <li className="menu-list__link"><a href="#">Services</a></li>
-                            <li className="menu-list__link"><a href="#">About us</a></li>
-                            <li className="menu-list__link"><a href="#">Contact us</a></li>
+                            <li className="menu-list__link"><NavLink to="">Home</NavLink></li>
+                            <li className="menu-list__link"><NavLink to="/projects">Projects</NavLink></li>
+                            <li className="menu-list__link"><NavLink to="/services">Services</NavLink></li>
+                            <li className="menu-list__link"><NavLink to="#">About us</NavLink></li>
+                            <li className="menu-list__link"><NavLink to="#">Contact us</NavLink></li>
                         </ul>
                     </nav>
                 </div>

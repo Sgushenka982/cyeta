@@ -1,6 +1,8 @@
-import project1 from './resource/img/projects-1.jpg';
-import project2 from './resource/img/projects-2.jpg';
-import project3 from './resource/img/projects-3.jpg';
+import project1 from '../resource/img/index-html/projects-1.jpg';
+import project2 from '../resource/img/index-html/projects-2.jpg';
+import project3 from '../resource/img/index-html/projects-3.jpg';
+import purpleCircle from '../resource/img/icons/arrow-up-icon.svg'
+import {NavLink} from "react-router-dom";
 
 
 function LatestProjects(){
@@ -9,7 +11,7 @@ function LatestProjects(){
             <h2 className="projects-header">LATEST PROJECTS</h2>
             <div className="projects-item">
                 <div className="flex-wrapper">
-                    <img className="project-item__picture" src={project1} alt=""/>
+                    <img className="project-item__picture" src={project1} alt="project1"/>
                     <div className="project-item__content">
                         <div className="flex-wrapper project-item__info">
                             <span>RESIDENTIAL / HOME RENOVATIONS</span>
@@ -25,7 +27,7 @@ function LatestProjects(){
                         </p>
                         <div className="project-item__seeMore">
                             <span>See more</span>
-                            <div className="purpleCircule"></div>
+                            <NavLink to="/projects/1"><img className="purpleCircule" src={purpleCircle} alt="linkToProject"/></NavLink>
                         </div>
                     </div>
                 </div>
@@ -47,15 +49,15 @@ function LatestProjects(){
                         </p>
                         <div className="project-item__seeMore">
                             <span>See more</span>
-                            <div className="purpleCircule"></div>
+                            <NavLink to="/projects/2"><img className="purpleCircule" src={purpleCircle} alt="linkToProject"/></NavLink>
                         </div>
                     </div>
-                    <img className="project-item__picture" src={project2} alt=""/>
+                    <img className="project-item__picture" src={project2} alt="project2"/>
                 </div>
             </div>
             <div className="projects-item">
                 <div className="flex-wrapper">
-                    <img className="project-item__picture" src={project3} alt=""/>
+                    <img className="project-item__picture" src={project3} alt="project3"/>
                     <div className="project-item__content">
                         <div className="flex-wrapper project-item__info">
                             <span>RESIDENTIAL / HOME RENOVATIONS</span>
@@ -70,12 +72,12 @@ function LatestProjects(){
                         </p>
                         <div className="project-item__seeMore">
                             <span>See more</span>
-                            <div className="purpleCircule"></div>
+                            <NavLink to="/projects/3"><img className="purpleCircule" src={purpleCircle} alt="linkToProject"/></NavLink>
                         </div>
                     </div>
                 </div>
             </div>
-            <button className="projects-all"><a href="#">See all</a></button>
+            <button className="projects-all"><NavLink to="/projects">See all</NavLink></button>
         </div>
     )
 }

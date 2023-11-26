@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: "Anton";
-  src: url( ./resource/fonts/Anton-Regular.ttf);
+  src: url( ../fonts/Anton-Regular.ttf);
 }
 
 @font-face {
   font-family: "Karla";
-  src: url( ./resource/fonts/Karla.ttf);
+  src: url( ../fonts/Karla.ttf);
 }
 
 *,body{
@@ -24,6 +24,7 @@
 
 body{
   background-color: #fcfcff;
+  height: 100vh;
 }
 
 h1, h2, h5{
@@ -50,12 +51,27 @@ a{
   margin-top: 60px;
 }
 
+.whiteFont{
+  color: white;
+}
+
+#root{
+  height: 100%;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .header{
-  margin-top: 10px;
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .logo{
-  width: 50px;
+  width: 7%;
 }
 
 .action-menu{
@@ -79,6 +95,10 @@ a{
   background-color: var(--purple);
 }
 
+.contactUs span{
+  font-weight: 700;
+}
+
 .contactUs:hover{
   cursor: pointer;
   background-color: var(--purple-hover);
@@ -86,16 +106,18 @@ a{
 }
 
 .aboutUs{
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 20px;
 }
 
 .aboutUs-content{
   width: 50%;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .aboutUs-content__header{
-  font-size: 55px;
+  font-size: 50px;
 }
 
 .aboutUs-content__text{
@@ -109,6 +131,7 @@ a{
 
 .aboutUs-contact{
   width: 40%;
+  z-index: 1;
 }
 
 .aboutUs-contact .wrapper{
@@ -125,6 +148,7 @@ a{
   align-items: center;
   padding-top: 10px;
   padding-bottom: 20px;
+  margin-top: 0;
 }
 
 .expirience-item{
@@ -190,6 +214,10 @@ a{
   height: 350px;
 }
 
+.projects{
+  margin-bottom: 50px
+}
+
 .projects-item{
   padding-bottom: 50px;
   margin-bottom: 50px;
@@ -242,8 +270,6 @@ a{
 .purpleCircule{
   width: 40px;
   height: 40px;
-  border-radius: 20px;
-  background-color: var(--purple);
   margin-left: 20px;
 }
 
@@ -256,7 +282,6 @@ a{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  vertical-align: auto;
   background-color: rgb(36, 36, 36);
   border-radius: 25px;
   color: white;
@@ -267,10 +292,15 @@ a{
   padding: 20px 0;
 }
 
-.contactForm input{
+.contactForm-input{
   width: 100%;
-  padding: 5px;
+  padding: 5px 0 5px 5px;
   margin-bottom: 20px;
+  border: none;
+}
+
+.contactForm-input:focus{
+  outline: none;
 }
 
 .contactForm-submit{
@@ -292,6 +322,7 @@ a{
 .footer{
   padding: 20px 0;
   color: white;
+  margin-top: 0;
 }
 
 .footer-content{
@@ -314,11 +345,14 @@ a{
 }
 
 .footer-feedback{
+  width: 30%;
   color: var(--gray);
 }
 
-.footer-feedback input{
-  width: 100%;
+.footer-feedback__input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--black);
   border: 1px solid white;
   border-radius: 15px;
@@ -326,14 +360,32 @@ a{
   margin-bottom: 10px;
 }
 
+.footer-feedback__input input{
+  flex-grow: 1;
+  background-color: var(--black);
+  border: none;
+  color: white;
+}
+
+.footer-feedback__input input:focus{
+  outline: none;
+}
+
+.footer-feedback__input img{
+  width: 5%;
+}
+
 .footer-menu{
   display: flex;
   margin-top: 30px;
   border-top: 1px solid var(--gray);
+  align-items: center;
 }
 
 .footer-menu .logo{
-  width: 15%;
+  color: white;
+  width: 7%;
+  margin-right: 10%;
 }
 
 .footer-menu .menu{
@@ -347,4 +399,60 @@ a{
 
 .footer-menu a{
   color: white;
+}
+
+.circle1{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle1{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle2{
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  z-index: -1;
+}
+
+#circle1{
+  top:-40px;
+  left: -70px;
+}
+
+#circle2{
+  right: -120px;
+  top: -40px;
+}
+
+#circle3{
+  left: -70px;
+  top: 1375px;
+}
+
+#circle4{
+  right: 32%;
+  top: 550px;
+}
+
+#circle5{
+  right: 36%;
+  top: 1100px;
+}
+
+#circle6{
+  right: 34%;
+  top: 2050px;
+}
+
+#circle7{
+  right: -5%;
+  top: 2200px;
 }
