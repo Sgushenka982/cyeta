@@ -31,9 +31,18 @@ h1, h2, h5{
   font-family: "Anton";
 }
 
+h1{
+  font-size: 50px;
+}
+
 h2{
   font-size: 35px;
   padding-bottom: 70px;
+}
+
+p{
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .flex-wrapper{
@@ -53,6 +62,18 @@ a{
 
 .whiteFont{
   color: white;
+}
+
+.btn{
+  border-radius: 5px;
+  border: none;
+  padding: 5px 20px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.btn:hover{
+  cursor: pointer;
 }
 
 #root{

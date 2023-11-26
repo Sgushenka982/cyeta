@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import {Route, Routes, useLocation} from "react-router-dom";
 import Services from "./pages/Services";
 import Projects from "./pages/Projects";
+import ResidentialService from "./pages/ResidentialService";
 
 function App() {
     const location = useLocation()
@@ -14,6 +15,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="/services" element={<Services/>}/>
+                <Route path="/services/residential" element={<ResidentialService/>}/>
                 <Route path="/projects" element={<Projects/>}/>
             </Routes>
             <Footer/>

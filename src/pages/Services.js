@@ -10,7 +10,7 @@ function Services(){
         <div className="background services">
             <div className="content">
                 <div className="services-header">
-                    <NavLink to="/"><img src={back} alt=""/></NavLink>
+                    <NavLink to="/"><img src={back} alt="backLink"/></NavLink>
                     <h1>OUR SERVICES</h1>
                     <p>
                         Discover top-tier building services tailored to both commercial and residential
