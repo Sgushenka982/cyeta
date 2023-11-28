@@ -9,20 +9,22 @@ const Homepage=()=>{
         <React.Fragment>
             <AboutUs/>
             <div className="background">
-                <div className="content expirience">
-                    <div className="expirience-item">
-                        <div className="expirience-item__number">+5</div>
-                        <p>Years within the industry in New Zealand</p>
-                    </div>
-                    <div className="whiteCircle"></div>
-                    <div className="expirience-item">
-                        <div className="expirience-item__number">+15</div>
-                        <p>Years of experience overseas</p>
-                    </div>
-                    <div className="whiteCircle"></div>
-                    <div className="expirience-item">
-                        <div className="expirience-item__number">+22</div>
-                        Finished projects
+                <div className="content experience">
+                    <div className="flex-wrapper">
+                        <div className="experience-item">
+                            <div className="experience-item__number">+5</div>
+                            <p>Years within the industry in New Zealand</p>
+                        </div>
+                        <div className="whiteCircle"></div>
+                        <div className="experience-item">
+                            <div className="experience-item__number">+15</div>
+                            <p>Years of experience overseas</p>
+                        </div>
+                        <div className="whiteCircle"></div>
+                        <div className="experience-item">
+                            <div className="experience-item__number">+22</div>
+                            <p>Finished projects</p>
+                        </div>
                     </div>
                 </div>
             </div>

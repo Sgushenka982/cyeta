@@ -76,6 +76,11 @@ a{
   cursor: pointer;
 }
 
+.background{
+  background-color: var(--black);
+  color: white;
+}
+
 #root{
   height: 100%;
 }
@@ -159,21 +164,17 @@ a{
   height: 100%;
 }
 
-.background{
-  background-color: var(--black);
-}
-
-.expirience{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.experience{
   padding-top: 10px;
   padding-bottom: 20px;
   margin-top: 0;
 }
 
-.expirience-item{
-  color: white;
+.experience .flex-wrapper{
+  align-items: center;
+}
+
+.experience-item{
   width: 180px;
   text-align: center;
 }
@@ -185,7 +186,7 @@ a{
   background-color: white;
 }
 
-.expirience-item__number{
+.experience-item__number{
   font-size: 50px;
   font-weight: bold;
   color: var(--purple);
@@ -420,6 +421,28 @@ a{
 
 .footer-menu a{
   color: white;
+}
+
+.contactUs-Footer{
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 30px;
+}
+
+.contactUs-Footer__item1{
+  padding-top: 70px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-right: 1px solid var(--gray);
+}
+
+.contactUs-Footer p{
+  margin-top: 30px;
 }
 
 .circle1{
