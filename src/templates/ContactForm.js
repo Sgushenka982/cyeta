@@ -1,4 +1,11 @@
+import axios from 'axios'
+
 function ContactForm() {
+    const sendEmail = ()=>{
+        axios.get("http://localhost:8081")
+            .then(response => console.log("response", response.data))
+            .catch(error => console.log(error))
+    }
     return (
         <form className="contactForm">
             <h3 className="contactForm-header">Request a free quote</h3>
@@ -14,7 +21,7 @@ function ContactForm() {
             <input className="contactForm-input" type="email" name="email" id="email" required/>
             <label className="inputLabel" htmlFor="phone">Phone:</label>
             <input className="contactForm-input" type="phone" name="phone" id="phone" required/>
-            <button type="submit" className="contactForm-submit">Submit</button>
+            <button type="submit" className="contactForm-submit" onClick={sendEmail}>Submit</button>
         </form>
     )
 }
