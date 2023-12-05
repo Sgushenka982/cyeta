@@ -17,12 +17,25 @@ function Header(){
         else
             el.style.display='none'
     }
+
+    let backgroundColor
+    if(location.pathname === '/services'){
+        backgroundColor={
+            backgroundColor:'rgb(36, 36, 36)'
+        }
+    }else {
+        backgroundColor={
+            backgroundColor:'#fcfcff'
+        }
+    }
     return (
         <React.Fragment>
-            <div className="background header">
+            <div id="header" className="background header" style={backgroundColor}>
                 <header className="content ">
                     <div className="flex-wrapper">
-                        <img src={location.pathname === '/services' ? logoWhite : logo} alt="logo" className="logo"/>
+                        <NavLink to="/">
+                            <img src={location.pathname === '/services' ? logoWhite : logo} alt="logo" className="logo"/>
+                        </NavLink>
                         <div className="action-menu">
                             <nav className="menu">
                                 <ul className="menu-list">

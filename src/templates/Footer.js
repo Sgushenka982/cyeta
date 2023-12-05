@@ -1,8 +1,28 @@
 import logo from '../resource/img/icons/logo-cyeta-white.svg'
 import arrow from '../resource/img/icons/arrow-up-right-white.svg'
 import {NavLink} from "react-router-dom";
+import axios from "axios";
 
 function Footer(){
+    const sendEmail = (e)=>{
+        e.preventDefault();
+
+        let footerEmail = document.getElementById('footerEmail')
+        if(footerEmail.value==='')
+            return
+        const data = JSON.stringify({
+            email:footerEmail.value,
+        })
+        const options = {
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }
+        axios.post("http://localhost:8081/mail",data,options)
+            .then(response => console.log("response", response.data))
+            .catch(error => console.log(error))
+            .finally(footerEmail.value='')
+    }
     return (
         <div className="background">
             <footer className="content footer">
@@ -23,14 +43,16 @@ function Footer(){
                     </div>
                     <div className="footer-feedback">
                         <div className="footer-feedback__input">
-                            <input type="text" placeholder="Enter you email for a free quote"/>
-                            <img src={arrow} alt=""/>
+                            <input id='footerEmail' type="email" placeholder="Enter you email for a free quote" required/>
+                            <img src={arrow} alt="" onClick={(e)=>sendEmail(e)}/>
                         </div>
                         <p>© 2021 Cyeta LTD. All rights reserved</p>
                     </div>
                 </div>
                 <div className="footer-menu">
-                    <img className="logo" alt="logo" src={logo}/>
+                    <NavLink to="/">
+                        <img className="logo" alt="logo" src={logo}/>
+                    </NavLink>
                     <nav className="menu">
                         <ul className="menu-list">
                             <li className="menu-list__link"><NavLink to="">Home</NavLink></li>

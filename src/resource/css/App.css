@@ -25,6 +25,8 @@
 body{
   background-color: #fcfcff;
   height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 h1, h2, h5{
@@ -102,6 +104,10 @@ a{
   position: relative;
 }
 
+.header .flex-wrapper{
+  align-items: center;
+}
+
 #contacts{
   display: none;
   padding-top: 30px;
@@ -132,7 +138,7 @@ a{
 }
 
 .logo{
-  width: 7%;
+  width: 100%;
 }
 
 .action-menu{
@@ -430,18 +436,19 @@ a{
 
 .footer-feedback__input img{
   width: 5%;
+  cursor: pointer;
 }
 
 .footer-menu{
   display: flex;
   margin-top: 30px;
+  padding-top: 5px;
   border-top: 1px solid var(--gray);
   align-items: center;
 }
 
 .footer-menu .logo{
-  color: white;
-  width: 7%;
+  width: 100%;
   margin-right: 10%;
 }
 
