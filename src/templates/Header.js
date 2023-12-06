@@ -6,6 +6,7 @@ import closeIcon from '../resource/img/icons/close-icon.svg'
 import mainIcon from '../resource/img/icons/main-icon.svg'
 import phoneIcon from '../resource/img/icons/phone-icon.svg'
 import locationIcon from '../resource/img/icons/location-icon.svg'
+import burger from '../resource/img/icons/burger-menu-icon.svg'
 
 function Header(){
     let location = useLocation()
@@ -28,6 +29,15 @@ function Header(){
             backgroundColor:'#fcfcff'
         }
     }
+
+    const openMobileMenu=()=>{
+        let menu = document.getElementById('mobileMenu')
+        const styles = window.getComputedStyle(menu)
+        if(styles.getPropertyValue("display") === 'none')
+            menu.style.display='block'
+        else
+            menu.style.display='none'
+    }
     return (
         <React.Fragment>
             <div id="header" className="background header" style={backgroundColor}>
@@ -48,6 +58,18 @@ function Header(){
                             </nav>
                             <button className="contactUs"><span>Request a Quote</span></button>
                         </div>
+                        <img id="burger" className="burger" src={burger} alt="burger" onClick={()=>openMobileMenu()}/>
+                    </div>
+                    <div id="mobileMenu" className="mobileMenu">
+                        <nav className="menu">
+                            <ul className="menu-list">
+                                <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/">Home</NavLink></li>
+                                <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/projects">Projects</NavLink></li>
+                                <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/services">Services</NavLink></li>
+                                <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="#">About us</NavLink></li>
+                                <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="#" onClick={openCloseContacts}>Contact us</NavLink></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div id="contacts">
                         <div className="flex-wrapper">

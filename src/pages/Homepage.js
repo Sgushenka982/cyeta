@@ -31,12 +31,12 @@ const Homepage=()=>{
             <WhyChooseUs/>
             <LatestProjects/>
             <img id="circle1" className="circle1" src={circleBg}/>
-            <img id="circle2" className="circle1" src={circleBg}/>
+            {/*<img id="circle2" className="circle1" src={circleBg}/>*/}
             <img id="circle3" className="circle1" src={circleBg}/>
             <img id="circle4" className="circle2" src={circleBg}/>
             <img id="circle5" className="circle2" src={circleBg}/>
             <img id="circle6" className="circle2" src={circleBg}/>
-            <img id="circle7" className="circle1" src={circleBg}/>
+            {/*<img id="circle7" className="circle1" src={circleBg}/>*/}
         </React.Fragment>
     )
 }

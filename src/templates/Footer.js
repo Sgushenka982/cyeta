@@ -64,6 +64,32 @@ function Footer(){
                     </nav>
                 </div>
             </footer>
+            <footer className="content mobileFooter">
+                <div className="flex-wrapper">
+                    <div className="footer-feedback__input">
+                        <input id='footerEmail' type="email" placeholder="Enter you email for a free quote" required/>
+                        <img src={arrow} alt="" onClick={(e)=>sendEmail(e)}/>
+                    </div>
+                    <div className="footer-content">
+                        <div className="footer-content__item">
+                            <h5>CONTACT US</h5>
+                            <div>022 410 9004</div>
+                            <div>cyetaltd@gmail.com</div>
+                        </div>
+                        <div className="footer-content__item">
+                            <h5>SERVICES</h5>
+                            <div>Residential</div>
+                            <div>Commercial</div>
+                            <div>Subcontracting</div>
+                        </div>
+                    </div>
+                    <div className="homeSpot">Auckland, New Zealand</div>
+                    <NavLink to="/">
+                        <img className="logo" alt="logo" src={logo}/>
+                    </NavLink>
+                    <p>© 2021 Cyeta LTD. All rights reserved</p>
+                </div>
+            </footer>
         </div>
     )
 }
