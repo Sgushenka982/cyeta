@@ -58,7 +58,7 @@ function Footer(){
                             <li className="menu-list__link"><NavLink to="">Home</NavLink></li>
                             <li className="menu-list__link"><NavLink to="/projects">Projects</NavLink></li>
                             <li className="menu-list__link"><NavLink to="/services">Services</NavLink></li>
-                            <li className="menu-list__link"><NavLink to="#">About us</NavLink></li>
+                            <li className="menu-list__link"><NavLink to="/aboutUs">About us</NavLink></li>
                             <li className="menu-list__link"><NavLink to="#">Contact us</NavLink></li>
                         </ul>
                     </nav>

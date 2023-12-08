@@ -125,12 +125,14 @@ a{
 #contacts{
   display: none;
   padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: absolute;
   left: 0;
   right: 0;
   z-index: 2;
   background-color:#fcfcff ;
-  /*box-shadow: 1px 1px 0 0 black;*/
+  box-shadow: 0 4px 2px -2px var(--gray);
 }
 
 .contacts-content__item{

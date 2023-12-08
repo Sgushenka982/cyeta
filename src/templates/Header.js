@@ -52,7 +52,7 @@ function Header(){
                                     <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/">Home</NavLink></li>
                                     <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/projects">Projects</NavLink></li>
                                     <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/services">Services</NavLink></li>
-                                    <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="#">About us</NavLink></li>
+                                    <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/aboutUs">About us</NavLink></li>
                                     <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="#" onClick={openCloseContacts}>Contact us</NavLink></li>
                                 </ul>
                             </nav>
@@ -66,7 +66,7 @@ function Header(){
                                 <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/">Home</NavLink></li>
                                 <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/projects">Projects</NavLink></li>
                                 <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/services">Services</NavLink></li>
-                                <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="#">About us</NavLink></li>
+                                <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/aboutUs">About us</NavLink></li>
                                 <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="#" onClick={openCloseContacts}>Contact us</NavLink></li>
                             </ul>
                         </nav>

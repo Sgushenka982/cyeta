@@ -9,6 +9,7 @@ import ResidentialService from "./pages/ResidentialService";
 import CommercialService from "./pages/CommercialService";
 import ProjectKohima from "./pages/ProjectKohima";
 import ProjectDeck from "./pages/ProjectDeck";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
     const location = useLocation()
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/services" element={<Services/>}/>
                 <Route path="/services/residential" element={<ResidentialService/>}/>
                 <Route path="/services/commercial" element={<CommercialService/>}/>
+                <Route path="/aboutUs" element={<AboutUs/>}/>
                 <Route path="/projects" element={<Projects/>}/>
                 <Route path="/projects/2" element={<ProjectDeck/>}/>
                 <Route path="/projects/3" element={<ProjectKohima/>}/>
