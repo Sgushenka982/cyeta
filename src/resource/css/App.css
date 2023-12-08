@@ -66,6 +66,10 @@ a{
   color: white;
 }
 
+.grayBackground{
+  background-color: var(--gray);
+}
+
 .btn{
   border-radius: 5px;
   border: none;
@@ -115,8 +119,8 @@ a{
 .mobileMenu{
   display: none;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -5%;
+  right: -5%;
   z-index: 2;
   background-color:#fcfcff ;
   box-shadow: 0 4px 2px -2px var(--gray);
@@ -580,6 +584,10 @@ a{
     flex-direction: row;
   }
 
+  .header .flex-wrapper a{
+    width: 130px;
+  }
+
   .action-menu{
     display: none;
   }
@@ -595,6 +603,7 @@ a{
   .burger{
     display: block;
     cursor: pointer;
+    width: 50px;
   }
 
   .mobileMenu .menu-list__link:hover{

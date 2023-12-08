@@ -7,6 +7,7 @@ import mainIcon from '../resource/img/icons/main-icon.svg'
 import phoneIcon from '../resource/img/icons/phone-icon.svg'
 import locationIcon from '../resource/img/icons/location-icon.svg'
 import burger from '../resource/img/icons/burger-menu-icon.svg'
+import burgerWhite from '../resource/img/icons/burger-menu-icon-white.svg'
 
 function Header(){
     let location = useLocation()
@@ -41,7 +42,7 @@ function Header(){
     return (
         <React.Fragment>
             <div id="header" className="background header" style={backgroundColor}>
-                <header className="content ">
+                <header className="content">
                     <div className="flex-wrapper">
                         <NavLink to="/">
                             <img src={location.pathname === '/services' ? logoWhite : logo} alt="logo" className="logo"/>
@@ -58,11 +59,11 @@ function Header(){
                             </nav>
                             <button className="contactUs"><span>Request a Quote</span></button>
                         </div>
-                        <img id="burger" className="burger" src={burger} alt="burger" onClick={()=>openMobileMenu()}/>
+                        <img id="burger" className="burger" src={location.pathname === '/services' ? burgerWhite : burger} alt="burger" onClick={()=>openMobileMenu()}/>
                     </div>
                     <div id="mobileMenu" className="mobileMenu">
                         <nav className="menu">
-                            <ul className="menu-list">
+                            <ul className={location.pathname === '/services' ? 'menu-list grayBackground' : 'menu-list'}>
                                 <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/">Home</NavLink></li>
                                 <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/projects">Projects</NavLink></li>
                                 <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="/services">Services</NavLink></li>
