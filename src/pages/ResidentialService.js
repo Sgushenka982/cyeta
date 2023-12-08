@@ -1,5 +1,6 @@
 import React from "react";
 import back from '../resource/img/icons/go-back-icon.svg';
+import backBlack from '../resource/img/icons/go-back-icon-black.svg';
 import picture1 from './../resource/img/residential-service/img-1.jpg'
 import picture2 from './../resource/img/residential-service/img-2.jpg'
 import picture3 from './../resource/img/residential-service/img-3.jpg'
@@ -14,7 +15,7 @@ const ResidentialService =()=>{
             <div className="background residentialService-header">
                 <div className="content">
                     <div className="residentialService-header__back">
-                        <NavLink to="/services"><img src={back} alt="backLink"/> SERVICES</NavLink>
+                        <NavLink to="/services"><img src={document.documentElement.clientWidth < 700 ? backBlack : back} alt="backLink"/> SERVICES</NavLink>
                     </div>
                     <h1>RESIDENTIAL</h1>
                     <p>
@@ -25,6 +26,8 @@ const ResidentialService =()=>{
                     <button className="btn">Request a Quote</button>
                 </div>
             </div>
+            <div className="mobileImg"></div>
+            <button className="mobileBtn btn">Request a Quote</button>
             <div className="content residentialService-content">
                 <div className="residentialService-content__item">
                     <div className="flex-wrapper">
@@ -48,6 +51,7 @@ const ResidentialService =()=>{
                             </p>
                         </div>
                         <img src={picture1} alt="picture1"/>
+                        <img className="mobile" src={picture1} alt="picture1"/>
                     </div>
                 </div>
                 <div className="residentialService-content__item">
@@ -69,6 +73,7 @@ const ResidentialService =()=>{
                                 and energy-efficient new home that you’ll cherish for years to come.
                             </p>
                         </div>
+                        <img className="mobile" src={picture2} alt="picture2"/>
                     </div>
                 </div>
                 <div className="residentialService-content__item">
@@ -91,6 +96,7 @@ const ResidentialService =()=>{
                             </p>
                         </div>
                         <img src={picture3} alt="picture3"/>
+                        <img className="mobile" src={picture3} alt="picture3"/>
                     </div>
                 </div>
                 <div className="residentialService-content__item">
@@ -110,6 +116,7 @@ const ResidentialService =()=>{
                                 into havens of beauty, functionality, and memorable experiences.
                             </p>
                         </div>
+                        <img className="mobile" src={picture4} alt="picture4"/>
                     </div>
                 </div>
                 <div className="residentialService-content__item">
@@ -129,6 +136,7 @@ const ResidentialService =()=>{
                             </p>
                         </div>
                         <img src={picture5} alt="picture5"/>
+                        <img className="mobile" src={picture5} alt="picture5"/>
                     </div>
                 </div>
             </div>
