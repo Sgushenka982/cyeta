@@ -74,3 +74,49 @@
 .item-text{
     margin-bottom: 10px;
 }
+
+@media (max-width: 700px) {
+    .padRight{
+        padding: 0;
+        border: none;
+    }
+
+    .padLeft{
+        padding: 0;
+    }
+
+    .commercialService-content__item{
+        padding: 0;
+    }
+
+    .itemS, .itemL{
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--gray);
+    }
+
+    .commercialService .mobileImg{
+        background-image: url("../img/commercial/commercial-hero.jpg");
+    }
+
+    .commercialService-header__back a{
+        color: var(--black);
+    }
+
+    .commercialService-header{
+        background-image: none;
+        color: var(--black);
+    }
+
+    .commercialService-header h1{
+        margin-top: 40px;
+    }
+
+    .commercialService-header p{
+        width: 100%;
+    }
+
+    .commercialService-header .btn{
+        display: none;
+    }
+
+}

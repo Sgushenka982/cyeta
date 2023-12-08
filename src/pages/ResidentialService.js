@@ -26,7 +26,7 @@ const ResidentialService =()=>{
                     <button className="btn">Request a Quote</button>
                 </div>
             </div>
-            <div className="mobileImg"></div>
+            <div className="residentialService mobileImg"></div>
             <button className="mobileBtn btn">Request a Quote</button>
             <div className="content residentialService-content">
                 <div className="residentialService-content__item">
