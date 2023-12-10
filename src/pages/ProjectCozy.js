@@ -1,14 +1,14 @@
 import {NavLink} from "react-router-dom";
 import back from "../resource/img/icons/go-back-icon-black.svg";
-import headerImg from "../resource/img/project-2/hero-project-2.jpg"
-import img1 from "../resource/img/project-2/key-1.jpg"
-import img2 from "../resource/img/project-2/key-2.jpg"
-import img3 from "../resource/img/project-2/key-3.jpg"
+import headerImg from "../resource/img/project-4/hero-project-4.png"
+import img1 from "../resource/img/project-4/key-1.png"
+import img2 from "../resource/img/project-4/key-2.png"
+import img3 from "../resource/img/project-4/key-3.png"
 import "../resource/css/Project.css"
 import React from "react";
 import ContactUsFooter from "../templates/ContactUsFooter";
 
-const ProjectKohima = () => {
+const ProjectCastorBay = () => {
     const footerH1 = 'CONTACT US TODAY TO DISCUSS YOUR OWN DREAM HOME PROJECT'
     return (
         <div className="someProject">
@@ -16,7 +16,7 @@ const ProjectKohima = () => {
                 <div className="project-header__back">
                     <NavLink to="/projects"><img src={back} alt="backLink"/> PROJECTS</NavLink>
                 </div>
-                <h1>LUXURY NEW BUILD HOME IN KOHIMARAMA</h1>
+                <h1>COZY HOUSE TRANSFORMATION AT ST HELIERS</h1>
                 <div className="project-title">
                     <div id="type">
                         <h3 className="project-header__type">TYPE</h3>
@@ -29,12 +29,8 @@ const ProjectKohima = () => {
                     <div id="description">
                         <h3 className="project-header__description">DESCRIPTION</h3>
                         <p className="header-description__content">
-                            This prestigious new build home project began with a vision to create a residence that
-                            harmonizes
-                            seamlessly with its surroundings while providing the utmost in luxury and comfort. Our team
-                            meticulously
-                            executed this vision from the ground up, starting with the construction of a solid concrete
-                            slab foundation.
+                            Our journey with the Cozy House at St Heliers began with a blank canvas—a concrete slab awaiting the magic of transformation.
+                            Tasked with converting this foundation into a warm and inviting home, our team embarked on a unique project that showcased our versatility and commitment to excellence.
                         </p>
                     </div>
                 </div>
@@ -83,4 +79,4 @@ const ProjectKohima = () => {
     )
 }
 
-export default ProjectKohima
+export default ProjectCastorBay

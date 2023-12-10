@@ -21,17 +21,6 @@ const ProjectDeck = () => {
     }else{
         delimiterClass = 'background'
     }
-    if(path.includes('/projects/')){
-        window.addEventListener('resize', ()=>{
-            if(document.documentElement.clientWidth<=700){
-                document.getElementById('delimiter').classList.remove('background')
-                document.getElementById('delimiter').classList.add('content')
-            }else{
-                document.getElementById('delimiter').classList.remove('content')
-                document.getElementById('delimiter').classList.add('background')
-            }
-        });
-    }
     return (
         <div className="someProject">
             <div className="content project-header">

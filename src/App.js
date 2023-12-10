@@ -10,6 +10,8 @@ import CommercialService from "./pages/CommercialService";
 import ProjectKohima from "./pages/ProjectKohima";
 import ProjectDeck from "./pages/ProjectDeck";
 import AboutUs from "./pages/AboutUs";
+import ProjectCastorBay from "./pages/ProjectCastorBay";
+import ProjectCozy from "./pages/ProjectCozy";
 
 function App() {
     const location = useLocation()
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/projects" element={<Projects/>}/>
                 <Route path="/projects/2" element={<ProjectDeck/>}/>
                 <Route path="/projects/3" element={<ProjectKohima/>}/>
+                <Route path="/projects/4" element={<ProjectCastorBay/>}/>
+                <Route path="/projects/5" element={<ProjectCozy/>}/>
             </Routes>
             <Footer/>
         </div>
