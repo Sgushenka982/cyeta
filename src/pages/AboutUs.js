@@ -5,7 +5,7 @@ const AboutUs=()=>{
     return(
         <div className="content welcomePage">
             <div className="flex-wrapper">
-                {/*<img src={picture} alt=""/>*/}
+                <img src={picture} alt=""/>
                 <div className="welcomePage-content">
                     <h1 className="welcomePage-content__header">About us</h1>
                     <p className="welcomePage-content__text">

@@ -95,6 +95,7 @@ a{
 .page{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100%;
 }
 
@@ -656,6 +657,10 @@ a{
 
   .whyChooseUs-content .flex-wrapper{
     flex-direction: row;
+  }
+
+  .mobileProjects{
+    display: block;
   }
 
   .projects{
