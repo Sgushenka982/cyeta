@@ -9,9 +9,25 @@ import React from "react";
 import ContactUsFooter from "../templates/ContactUsFooter";
 
 const ProjectDeck = () => {
-
     const footerH1 = 'READY TO TRANSFORM YOUR OUTDOOR SPACE? CONTACT US TODAY TO START YOUR JOURNEY TOWARD A STUNNING DECK!'
 
+    let delimiterClass
+
+    if(document.documentElement.clientWidth<=700){
+        delimiterClass = 'content'
+    }else{
+        delimiterClass = 'background'
+    }
+
+    window.addEventListener('resize', ()=>{
+        if(document.documentElement.clientWidth<=700){
+            document.getElementById('delimiter').classList.remove('background')
+            document.getElementById('delimiter').classList.add('content')
+        }else{
+            document.getElementById('delimiter').classList.remove('content')
+            document.getElementById('delimiter').classList.add('background')
+        }
+    });
     return (
         <div className="someProject">
             <div className="content project-header">
@@ -19,30 +35,27 @@ const ProjectDeck = () => {
                     <NavLink to="/projects"><img src={back} alt="backLink"/> PROJECTS</NavLink>
                 </div>
                 <h1>RESIDENTIAL DECK CONSTRUCTION</h1>
-                <table>
-                    <thead>
-                    <tr>
-                        <th className="project-header__type">TYPE</th>
-                        <th className="project-header__year">YEAR</th>
-                        <th className="project-header__description">DESCRIPTION</th>
-                    </tr>
-                    <tr className="project-header__spaceBetweenTableRows"></tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Residential Services</td>
-                        <td>2023</td>
-                        <td>
+                <div className="project-title">
+                    <div id="type">
+                        <h3 className="project-header__type">TYPE</h3>
+                        <p className="header-type__content">Residential Services</p>
+                    </div>
+                    <div id="year">
+                        <h3 className="project-header__year">YEAR</h3>
+                        <p className="header-year__content">2023</p>
+                    </div>
+                    <div id="description">
+                        <h3 className="project-header__description">DESCRIPTION</h3>
+                        <p className="header-description__content">
                             This project involved the design and construction of a spacious deck that seamlessly integrates with
                             the natural surroundings. The client’s vision was to have a functional yet aesthetically pleasing outdoor
                             space that would serve as an extension of their home. Our team worked closely with the client to ensure
                             their budget was accommodated without compromising on quality or design.
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className="background">
+            <div id="delimiter" className={delimiterClass}>
                 <img src={headerImg} alt="img"/>
             </div>
             <div className="content project-content">

@@ -788,6 +788,25 @@ a{
     margin-bottom: 2rem;
   }
 
+  .contactUs-Footer{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .contactUs-Footer__item1{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
+
+  .contactUs-Footer__item1 h2{
+    text-align: center;
+  }
+
   #circle3{
     display: none;
   }
