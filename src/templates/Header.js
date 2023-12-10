@@ -8,8 +8,9 @@ import phoneIcon from '../resource/img/icons/phone-icon.svg'
 import locationIcon from '../resource/img/icons/location-icon.svg'
 import burger from '../resource/img/icons/burger-menu-icon.svg'
 import burgerWhite from '../resource/img/icons/burger-menu-icon-white.svg'
+import ContactForm from "./ContactForm";
 
-function Header(){
+function Header(props){
     let location = useLocation()
     const openCloseContacts =()=>{
         const el = document.getElementById('contacts')
@@ -31,12 +32,12 @@ function Header(){
         }
     }
 
-    const openMobileMenu=()=>{
+    const openMobileMenu=()=> {
         let menu = document.getElementById('mobileMenu')
         const styles = window.getComputedStyle(menu)
-        if(styles.getPropertyValue("display") === 'none')
-            menu.style.display='block'
-        else
+        if (styles.getPropertyValue("display") === 'none'){
+            menu.style.display = 'block'
+        }else
             menu.style.display='none'
     }
     return (
@@ -57,7 +58,7 @@ function Header(){
                                     <li className="menu-list__link"><NavLink className={location.pathname === '/services' ? 'whiteFont' : ''} to="#" onClick={openCloseContacts}>Contact us</NavLink></li>
                                 </ul>
                             </nav>
-                            <button className="contactUs"><span>Request a Quote</span></button>
+                            <button className="contactUs" onClick={()=>props.openCloseRequestForm()}><span>Request a Quote</span></button>
                         </div>
                         <img id="burger" className="burger" src={location.pathname === '/services' ? burgerWhite : burger} alt="burger" onClick={()=>openMobileMenu()}/>
                     </div>
@@ -93,6 +94,10 @@ function Header(){
                         </div>
                     </div>
                 </header>
+            </div>
+            <div id="popup-fade" className="popup-fade hidden"></div>
+            <div id="RequestForm" className="RequestForm">
+                <ContactForm close={true} openCloseRequestForm={props.openCloseRequestForm}/>
             </div>
         </React.Fragment>
     )

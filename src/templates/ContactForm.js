@@ -1,6 +1,8 @@
 import axios from 'axios'
+import closeIcon from "../resource/img/icons/close-icon-white.svg"
+import React from "react";
 
-function ContactForm() {
+function ContactForm(props) {
     const sendEmail = (e)=>{
         e.preventDefault();
         const data = JSON.stringify({
@@ -15,12 +17,20 @@ function ContactForm() {
             }
         }
         axios.post("http://localhost:8081/mail",data,options)
-            .then(response => console.log("response", response.data))
+            .then(response => {
+                document.getElementById('RequestForm').style.display='none'
+                document.getElementById("popup-fade").classList.remove('visible')
+                document.getElementById("popup-fade").classList.add('hidden')
+            })
             .catch(error => console.log(error))
     }
+    const closeImg = props.close ? <img className="close" src={closeIcon} alt="closeIcon" onClick={()=>props.openCloseRequestForm()}/> : ''
     return (
         <form className="contactForm">
-            <h3 className="contactForm-header">Request a free quote</h3>
+            <div className="flex-wrapper">
+                <h3 className="contactForm-header">Request a free quote</h3>
+                {closeImg}
+            </div>
             <label className="inputLabel" htmlFor="serviceNeed">Service needed*</label>
             <select className="contactForm-input" name="serviceNeed" id="serviceNeed" required >
                 <option value="">General building job</option>

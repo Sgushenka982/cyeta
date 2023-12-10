@@ -15,14 +15,28 @@ import ProjectCozy from "./pages/ProjectCozy";
 
 function App() {
     const location = useLocation()
+
+    const openCloseRequestForm =()=> {
+        const el = document.getElementById('RequestForm')
+        const styles = window.getComputedStyle(el)
+        if (styles.getPropertyValue("display") === 'none'){
+            el.style.display = 'block'
+            document.getElementById("popup-fade").classList.remove('hidden')
+            document.getElementById("popup-fade").classList.add('visible')
+        }else{
+            el.style.display='none'
+            document.getElementById("popup-fade").classList.remove('visible')
+            document.getElementById("popup-fade").classList.add('hidden')
+        }
+    }
     return (
         <div className={'page ' + (location.pathname === '/services' ? 'background' : '')}>
-            <Header/>
+            <Header openCloseRequestForm={openCloseRequestForm}/>
             <Routes>
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="/services" element={<Services/>}/>
-                <Route path="/services/residential" element={<ResidentialService/>}/>
-                <Route path="/services/commercial" element={<CommercialService/>}/>
+                <Route path="/services/residential" element={<ResidentialService openCloseRequestForm={openCloseRequestForm}/>}/>
+                <Route path="/services/commercial" element={<CommercialService openCloseRequestForm={openCloseRequestForm}/>}/>
                 <Route path="/aboutUs" element={<AboutUs/>}/>
                 <Route path="/projects" element={<Projects/>}/>
                 <Route path="/projects/2" element={<ProjectDeck/>}/>

@@ -70,6 +70,13 @@ a{
   background-color: var(--gray);
 }
 
+.hidden{
+  display: none;
+}
+
+.visible{
+  display: block;
+}
 
 .btn{
   border-radius: 5px;
@@ -175,6 +182,28 @@ a{
 .menu-list__link{
   padding: 10px 0;
   margin-right: 40px;
+}
+
+.popup-fade:before {
+  content: '';
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+
+.RequestForm{
+  position: fixed;
+  top: 10%;
+  left: 40%;
+  z-index: 3;
+  display: none;
+  width: 420px;
 }
 
 .contactUs{
@@ -374,6 +403,11 @@ a{
   background-color: rgb(36, 36, 36);
   border-radius: 25px;
   color: white;
+}
+
+.contactForm .flex-wrapper{
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .contactForm-header{
@@ -588,6 +622,16 @@ a{
 
   .header .flex-wrapper a{
     width: 130px;
+  }
+
+  .contactForm .flex-wrapper{
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .RequestForm{
+    top: 10%;
+    left: 15%;
   }
 
   .action-menu{

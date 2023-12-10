@@ -9,7 +9,7 @@ import picture5 from './../resource/img/residential-service/img-5.jpg'
 import '../resource/css/ResidentialService.css'
 import {NavLink} from "react-router-dom";
 
-const ResidentialService =()=>{
+const ResidentialService =(props)=>{
     return (
         <div className="residentialService">
             <div className="background residentialService-header">
@@ -23,11 +23,11 @@ const ResidentialService =()=>{
                         top-notch quality. Working with us means turning your dream
                         home into a reality, with every detail designed to perfection.
                     </p>
-                    <button className="btn">Request a Quote</button>
+                    <button className="btn" onClick={()=>props.openCloseRequestForm()}>Request a Quote</button>
                 </div>
             </div>
             <div className="residentialService mobileImg"></div>
-            <button className="mobileBtn btn">Request a Quote</button>
+            <button className="mobileBtn btn" onClick={()=>props.openCloseRequestForm()}>Request a Quote</button>
             <div className="content residentialService-content">
                 <div className="residentialService-content__item">
                     <div className="flex-wrapper">

@@ -9,7 +9,7 @@ import picture6 from './../resource/img/commercial/subcontracting.jpg'
 import '../resource/css/CommercialService.css'
 import {NavLink} from "react-router-dom";
 
-const CommercialService =()=>{
+const CommercialService =(props)=>{
     return (
         <div className="commercialService">
             <div className="background commercialService-header">
@@ -23,11 +23,11 @@ const CommercialService =()=>{
                         enhance the functionality, durability, and aesthetics of
                         commercial sites.
                     </p>
-                    <button className="btn">Request a Quote</button>
+                    <button className="btn" onClick={()=>props.openCloseRequestForm()}>Request a Quote</button>
                 </div>
             </div>
             <div className="commercialService mobileImg"></div>
-            <button className="mobileBtn btn">Request a Quote</button>
+            <button className="mobileBtn btn" onClick={()=>props.openCloseRequestForm()}>Request a Quote</button>
             <div className="content commercialService-content">
                 <div className="commercialService-content__item">
                     <div className="flex-wrapper">
