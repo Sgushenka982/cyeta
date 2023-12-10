@@ -4,7 +4,6 @@ import project3 from '../resource/img/index-html/projects-3.jpg';
 import purpleCircle from '../resource/img/icons/arrow-up-icon.svg'
 import {NavLink} from "react-router-dom";
 import React from "react";
-import ReactDOM from "react-dom/client";
 
 
 function LatestProjects(){

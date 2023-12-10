@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import back from "../resource/img/icons/go-back-icon-black.svg";
 import headerImg from "../resource/img/project-1/residential-deck-hero.jpg"
 import img1 from "../resource/img/project-1/key-1.jpg"
@@ -9,6 +9,9 @@ import React from "react";
 import ContactUsFooter from "../templates/ContactUsFooter";
 
 const ProjectDeck = () => {
+    let location = useLocation()
+    const path = location.pathname
+
     const footerH1 = 'READY TO TRANSFORM YOUR OUTDOOR SPACE? CONTACT US TODAY TO START YOUR JOURNEY TOWARD A STUNNING DECK!'
 
     let delimiterClass
@@ -18,16 +21,17 @@ const ProjectDeck = () => {
     }else{
         delimiterClass = 'background'
     }
-
-    window.addEventListener('resize', ()=>{
-        if(document.documentElement.clientWidth<=700){
-            document.getElementById('delimiter').classList.remove('background')
-            document.getElementById('delimiter').classList.add('content')
-        }else{
-            document.getElementById('delimiter').classList.remove('content')
-            document.getElementById('delimiter').classList.add('background')
-        }
-    });
+    if(path.includes('/projects/')){
+        window.addEventListener('resize', ()=>{
+            if(document.documentElement.clientWidth<=700){
+                document.getElementById('delimiter').classList.remove('background')
+                document.getElementById('delimiter').classList.add('content')
+            }else{
+                document.getElementById('delimiter').classList.remove('content')
+                document.getElementById('delimiter').classList.add('background')
+            }
+        });
+    }
     return (
         <div className="someProject">
             <div className="content project-header">
