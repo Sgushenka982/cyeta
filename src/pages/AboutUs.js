@@ -1,4 +1,4 @@
-import picture from '../resource/img/project-3/hero-project-3.png'
+import picture from '../resource/img/project-3/key-2.png'
 import '../resource/css/aboutUs.css'
 
 const AboutUs=()=>{

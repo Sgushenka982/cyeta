@@ -29,8 +29,8 @@ const ProjectCastorBay = () => {
                     <div id="description">
                         <h3 className="project-header__description">DESCRIPTION</h3>
                         <p className="header-description__content">
-                            Our journey with the Cozy House at St Heliers began with a blank canvas—a concrete slab awaiting the magic of transformation.
-                            Tasked with converting this foundation into a warm and inviting home, our team embarked on a unique project that showcased our versatility and commitment to excellence.
+                            Our journey with the Home in St Heliers began with a blank canvas—a concrete slab awaiting transformation.
+                            Tasked with creating a warm retreat, our team embarked on a unique project showcasing versatility and commitment to excellence.
                         </p>
                     </div>
                 </div>
@@ -42,9 +42,14 @@ const ProjectCastorBay = () => {
                 <div className="project-overview">
                     <h3>Project Overview</h3>
                     <p>
-                        At Cyeta Limited, we are thrilled to showcase our latest masterpiece—a luxury new build home in the
-                        exclusive coastal neighborhood of Kohimarama, Auckland. This project represents the epitome of
-                        modern design, craftsmanship, and opulence in one of the city’s most sought-after areas.
+                        The client envisioned a cozy haven, and our team embraced the challenge of the unconventional site.
+                        From framing to finishing touches, every step was meticulously planned to bring the dream to life.
+                        The non-standard nature of the project, dictated by the distinctive landscape, was navigated with expertise.
+                        Innovative design solutions complemented the surroundings, resulting in a cozy haven seamlessly integrated with the environment.
+                        Efficiency was paramount, and we transformed the concrete slab into a finished home in just six months.
+                        This achievement speaks to our dedication to timelines without compromising quality.
+                        Handling every aspect in-house, from groundwork to the final coat of paint, showcased our comprehensive capabilities.
+                        The Home in St Heliers stands as an example of how our team's expertise, adaptability, and passion for quality construction turn a simple concrete slab into a bespoke dwelling. It's more than a house; it's a home reflecting the unique character of both the landscape and the client's vision.
                     </p>
                 </div>
                 <div className="keyFeatures">
