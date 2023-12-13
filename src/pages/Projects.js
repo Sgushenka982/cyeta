@@ -14,10 +14,10 @@ function Projects(){
                 <h1>Projects</h1>
                 <p>On this page you can get acquainted with all the projects of our organization</p>
                 <div className="projectList">
-                    <NavLink className="project" to="/projects/1">
-                        <h3>Project name</h3>
-                        <img src={project1} alt="projectImage"/>
-                    </NavLink>
+                    {/*<NavLink className="project" to="/projects/1">*/}
+                    {/*    <h3>Project name</h3>*/}
+                    {/*    <img src={project1} alt="projectImage"/>*/}
+                    {/*</NavLink>*/}
                     <NavLink className="project" to="/projects/2">
                         <h3>Residential Deck Construction</h3>
                         <img src={project2} alt="projectImage"/>

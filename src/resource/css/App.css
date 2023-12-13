@@ -856,6 +856,10 @@ a{
     text-align: center;
   }
 
+  .RequestForm{
+    width: 75%;
+  }
+
   #circle3{
     display: none;
   }
@@ -870,5 +874,24 @@ a{
 
   #circle6{
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .whyChooseUs-content__picture{
+    height: 250px;
+  }
+
+  .footer-feedback__input input{
+    font-size: 1rem;
+  }
+
+  .footer-content__item{
+    margin-right: 0;
+    font-size: 1.1rem;
   }
 }

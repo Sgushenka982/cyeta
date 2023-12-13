@@ -11,31 +11,31 @@ function LatestProjects(){
         <React.Fragment>
         <div className="content projects">
             <h2 className="projects-header">LATEST PROJECTS</h2>
-            <div className="projects-item">
-                <div className="flex-wrapper">
-                    <img className="project-item__picture" src={project1} alt="project1"/>
-                    <div className="project-item__content">
-                        <div className="flex-wrapper project-item__info">
-                            <span>RESIDENTIAL / HOME RENOVATIONS</span>
-                            <span>2023</span>
-                        </div>
-                        <h3 className="project-item__header">Project name</h3>
-                        <p className="project-item__description">
-                            Experience the difference when you choose our services, where we place a premium on speed
-                            and time efficiency. We recognize that our customers are eager to witness the transformative
-                            results and invite friends and family to celebrate their upgraded homes. That’s why we
-                            prioritize efficiency at every step of the project, ensuring you can enjoy the results sooner and
-                            share the joy of your home’s transformation with loved ones.
-                        </p>
-                        <div className="project-item__seeMore">
-                            <NavLink to="/projects/1">
-                                <span>See more</span>
-                                <img className="purpleCircule" src={purpleCircle} alt="linkToProject"/>
-                            </NavLink>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {/*<div className="projects-item">*/}
+            {/*    <div className="flex-wrapper">*/}
+            {/*        <img className="project-item__picture" src={project1} alt="project1"/>*/}
+            {/*        <div className="project-item__content">*/}
+            {/*            <div className="flex-wrapper project-item__info">*/}
+            {/*                <span>RESIDENTIAL / HOME RENOVATIONS</span>*/}
+            {/*                <span>2023</span>*/}
+            {/*            </div>*/}
+            {/*            <h3 className="project-item__header">Project name</h3>*/}
+            {/*            <p className="project-item__description">*/}
+            {/*                Experience the difference when you choose our services, where we place a premium on speed*/}
+            {/*                and time efficiency. We recognize that our customers are eager to witness the transformative*/}
+            {/*                results and invite friends and family to celebrate their upgraded homes. That’s why we*/}
+            {/*                prioritize efficiency at every step of the project, ensuring you can enjoy the results sooner and*/}
+            {/*                share the joy of your home’s transformation with loved ones.*/}
+            {/*            </p>*/}
+            {/*            <div className="project-item__seeMore">*/}
+            {/*                <NavLink to="/projects/1">*/}
+            {/*                    <span>See more</span>*/}
+            {/*                    <img className="purpleCircule" src={purpleCircle} alt="linkToProject"/>*/}
+            {/*                </NavLink>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className="projects-item">
                 <div className="flex-wrapper">
                     <div className="project-item__content">
@@ -89,31 +89,31 @@ function LatestProjects(){
         </div>
             <div className="content mobileProjects">
                 <h2 className="projects-header">LATEST PROJECTS</h2>
-                <div className="projects-item">
-                    <div className="flex-wrapper">
-                        <div className="flex-wrapper project-item__info">
-                            <span>RESIDENTIAL / HOME RENOVATIONS</span>
-                            <span>2023</span>
-                        </div>
-                        <img className="project-item__picture" src={project1} alt="project1"/>
-                        <div className="project-item__content">
-                            <h3 className="project-item__header">Project name</h3>
-                            <p className="project-item__description">
-                                Experience the difference when you choose our services, where we place a premium on speed
-                                and time efficiency. We recognize that our customers are eager to witness the transformative
-                                results and invite friends and family to celebrate their upgraded homes. That’s why we
-                                prioritize efficiency at every step of the project, ensuring you can enjoy the results sooner and
-                                share the joy of your home’s transformation with loved ones.
-                            </p>
-                            <div className="project-item__seeMore">
-                                <NavLink to="/projects/1">
-                                    <span>See more</span>
-                                    <img className="purpleCircule" src={purpleCircle} alt="linkToProject"/>
-                                </NavLink>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className="projects-item">*/}
+                {/*    <div className="flex-wrapper">*/}
+                {/*        <div className="flex-wrapper project-item__info">*/}
+                {/*            <span>RESIDENTIAL / HOME RENOVATIONS</span>*/}
+                {/*            <span>2023</span>*/}
+                {/*        </div>*/}
+                {/*        <img className="project-item__picture" src={project1} alt="project1"/>*/}
+                {/*        <div className="project-item__content">*/}
+                {/*            <h3 className="project-item__header">Project name</h3>*/}
+                {/*            <p className="project-item__description">*/}
+                {/*                Experience the difference when you choose our services, where we place a premium on speed*/}
+                {/*                and time efficiency. We recognize that our customers are eager to witness the transformative*/}
+                {/*                results and invite friends and family to celebrate their upgraded homes. That’s why we*/}
+                {/*                prioritize efficiency at every step of the project, ensuring you can enjoy the results sooner and*/}
+                {/*                share the joy of your home’s transformation with loved ones.*/}
+                {/*            </p>*/}
+                {/*            <div className="project-item__seeMore">*/}
+                {/*                <NavLink to="/projects/1">*/}
+                {/*                    <span>See more</span>*/}
+                {/*                    <img className="purpleCircule" src={purpleCircle} alt="linkToProject"/>*/}
+                {/*                </NavLink>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <div className="projects-item">
                     <div className="flex-wrapper">
                         <div className="project-item__content">
